@@ -1,0 +1,35 @@
+.settings-page > .section-heading:first-of-type { margin-top: 5px; }
+.settings-channel-card { overflow: hidden; border: 1px solid var(--hairline); border-radius: var(--radius); background: var(--surface); }
+.channel-status-row { display: flex; width: 100%; min-height: 53px; align-items: center; justify-content: space-between; gap: 12px; padding: 0 17px; border: 0; border-bottom: 1px solid var(--hairline); background: transparent; text-align: left; }
+.channel-status-row strong { font-size: 13px; font-weight: 500; }
+.channel-status-row span { color: var(--secondary); font-size: 11px; }
+.channel-status-row .connected-label { color: var(--sage); }
+.channel-action-row { cursor: pointer; }
+.channel-action-row:hover { background: var(--surface-raised); }
+.webhook-field { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 8px; padding: 12px 14px 8px; }
+.webhook-field .text-input { min-width: 0; }
+.mono-input { font-family: var(--mono); font-size: 11px; }
+.settings-channel-card > .button { width: calc(100% - 28px); margin: 7px 14px; }
+.settings-channel-card > .inline-error, .settings-channel-card > .inline-notice { margin: 7px 14px; }
+.appearance-section { margin-top: 34px; }
+.appearance-section .section-heading, .plan-section .section-heading { margin-top: 0; }
+.plan-section { margin-top: 36px; }
+.plan-name { margin: 5px 0 17px; font-family: var(--serif); font-size: 27px; font-weight: 500; letter-spacing: -.025em; }
+.usage-meter { margin: 15px 0; }
+.usage-meter > div:first-child { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 7px; font-size: 12px; }
+.usage-meter strong { font-family: var(--mono); font-size: 11px; font-weight: 400; }
+.usage-track { height: 4px; overflow: hidden; border-radius: 99px; background: var(--hairline); }
+.usage-track span { display: block; height: 100%; border-radius: inherit; background: var(--sage); transition: width .25s ease; }
+.plan-option { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 15px 0; border-bottom: 1px solid var(--hairline); }
+.plan-option > div { display: grid; gap: 4px; }
+.plan-option strong { font-size: 13px; font-weight: 500; }
+.plan-option small, .plan-option > span { color: var(--secondary); font-size: 11px; }
+.plan-option button { min-height: 34px; padding: 0 14px; font-size: 11px; }
+.current-plan strong, .current-plan > span { color: var(--sage); }
+
+@media (max-width: 899px) {
+  .settings-page .segmented-control { width: 100%; justify-content: space-between; }
+  .settings-page .segment { flex: 1; padding-right: 9px; padding-left: 9px; }
+  .settings-page .section-heading { margin-top: 27px; }
+  .settings-page .plan-section { margin-top: 31px; }
+}

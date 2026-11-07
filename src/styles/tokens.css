@@ -1,0 +1,83 @@
+@import '@fontsource/newsreader/latin-500.css';
+@import '@fontsource/newsreader/latin-ext-500.css';
+@import '@fontsource/newsreader/latin-600.css';
+@import '@fontsource/newsreader/latin-ext-600.css';
+@import '@fontsource/inter-tight/latin-400.css';
+@import '@fontsource/inter-tight/latin-ext-400.css';
+@import '@fontsource/inter-tight/latin-500.css';
+@import '@fontsource/inter-tight/latin-ext-500.css';
+@import '@fontsource/inter-tight/latin-600.css';
+@import '@fontsource/inter-tight/latin-ext-600.css';
+@import '@fontsource/ibm-plex-mono/latin-400.css';
+@import '@fontsource/ibm-plex-mono/latin-ext-400.css';
+@import '@fontsource/ibm-plex-mono/latin-500.css';
+@import '@fontsource/ibm-plex-mono/latin-ext-500.css';
+
+:root {
+  font-family: 'Inter Tight', sans-serif;
+  color-scheme: dark;
+  --background: #0c0c0d;
+  --surface: #161618;
+  --surface-raised: #1d1d20;
+  --hairline: #26262a;
+  --text: #edebe6;
+  --secondary: #8c8a85;
+  --tertiary: #5b5955;
+  --sage: #9fb8a4;
+  --brick: #c8705f;
+  --primary-button: #edebe6;
+  --primary-button-text: #161616;
+  --serif: 'Newsreader', Georgia, serif;
+  --mono: 'IBM Plex Mono', monospace;
+  --radius: 14px;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --background: #f4f2ee;
+  --surface: #fbfaf7;
+  --surface-raised: #ffffff;
+  --hairline: #dad7d0;
+  --text: #161616;
+  --secondary: #6b6962;
+  --tertiary: #9a978f;
+  --sage: #4f6b57;
+  --brick: #a4523f;
+  --primary-button: #161616;
+  --primary-button-text: #fbfaf7;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { min-height: 100%; margin: 0; }
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { color: inherit; }
+a { color: inherit; text-decoration: none; }
+svg { stroke-width: 1.6; }
+
+:focus-visible {
+  outline: 2px solid var(--sage);
+  outline-offset: 3px;
+}
+
+::selection { color: var(--background); background: var(--sage); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,23 @@
+.detail-status { display: flex; align-items: center; gap: 8px; margin: -8px 0 24px; color: var(--secondary); font-size: 12px; }
+.summary-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 0 19px; border: 1px solid var(--hairline); border-radius: var(--radius); background: var(--surface); }
+.summary-grid > div { display: grid; min-height: 78px; align-content: center; gap: 6px; padding: 0 17px; border: 0; }
+.summary-grid > div + div { border-left: 1px solid var(--hairline); }
+.summary-grid span { color: var(--secondary); font-size: 11px; }
+.summary-grid strong { font-size: 13px; font-weight: 500; }
+.button-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 32px; }
+.button-row .button { min-width: 102px; }
+.detail-page .section-heading { margin-top: 23px; }
+.agent-list.full-list .agent-row { padding: 0 12px; }
+.agent-list.full-list .row-main { min-height: 72px; }
+.inline-notice + .segmented-control { margin-top: 7px; }
+.alerts-page .empty-state { min-height: 58vh; border: 0; background: transparent; align-content: center; }
+.alerts-page .empty-state > svg { width: 24px; height: 24px; margin-bottom: 3px; color: var(--secondary); }
+
+@media (max-width: 899px) {
+  .summary-grid > div { min-height: 69px; padding: 0 9px; }
+  .summary-grid span { font-size: 9px; }
+  .summary-grid strong { font-size: 11px; }
+  .button-row { gap: 6px; }
+  .button-row .button { min-width: 0; flex: 1; padding: 0 12px; font-size: 11px; }
+  .agent-list.full-list .agent-row { padding: 0 4px; }
+}

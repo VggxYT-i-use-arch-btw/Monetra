@@ -1,0 +1,36 @@
+.home-page { max-width: 1320px; }
+.mobile-topbar { display: none; }
+.home-intro { max-width: 1000px; margin: 135px auto 26px; text-align: center; }
+.eyebrow { color: var(--secondary); font-family: var(--mono); font-size: 10px; letter-spacing: .13em; }
+.home-intro h1 { margin: 0; font-family: var(--serif); font-size: clamp(38px, 2.8vw, 42px); font-weight: 500; letter-spacing: -.04em; line-height: 1.05; }
+.request-panel { position: relative; display: grid; max-width: 850px; min-height: 80px; grid-template-columns: 23px minmax(0, 1fr) auto; align-items: center; gap: 9px; margin: 0 auto; padding: 12px 18px; border: 1px solid var(--hairline); border-radius: var(--radius); background: var(--surface); }
+.request-search-icon { width: 19px; height: 19px; margin-top: 3px; color: var(--secondary); }
+.request-panel textarea { width: 100%; min-height: 32px; resize: none; border: 0; outline: 0; background: transparent; color: var(--text); font-size: 14px; line-height: 1.5; }
+.request-panel textarea::placeholder { color: var(--secondary); opacity: .92; }
+.request-actions { display: flex; grid-column: 3; justify-content: flex-end; gap: 8px; }
+.request-actions .button-outline { border-color: var(--hairline); background: transparent; }
+.request-progress { display: flex; max-width: 850px; flex-wrap: wrap; align-items: center; gap: 10px; margin: 14px auto 0; color: var(--secondary); font-size: 12px; }
+.progress-track { width: 100%; height: 2px; overflow: hidden; background: var(--hairline); }
+.progress-track span { display: block; width: 38%; height: 100%; background: var(--sage); animation: progress 1.4s ease-in-out infinite alternate; }
+@keyframes progress { to { transform: translateX(165%); } }
+.filter-chip { padding: 5px 9px; border: 1px solid var(--hairline); border-radius: 999px; color: var(--text); font-size: 10px; }
+.home-columns { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 44px; margin-top: 77px; }
+.home-columns.is-dimmed { opacity: .34; }
+.home-section .section-heading { margin-top: 0; }
+.home-section .state-card { padding: 24px 16px; }
+.home-section .loading-state { min-height: 200px; }
+
+@media (max-width: 899px) {
+  .home-page { padding-top: 12px; }
+  .mobile-topbar { display: flex; height: 42px; margin-bottom: 34px; }
+  .home-intro { margin: 0 0 24px; text-align: left; }
+  .home-intro h1 { font-size: clamp(38px, 10vw, 48px); line-height: 1.02; }
+  .request-panel { min-height: 145px; grid-template-columns: 18px minmax(0, 1fr); align-items: start; gap: 8px; padding: 16px 14px 12px; }
+  .request-panel textarea { min-height: 74px; font-size: 13px; }
+  .request-actions { grid-column: 2; }
+  .request-search-icon { width: 17px; height: 17px; }
+  .request-actions .round-button { width: 36px; height: 36px; }
+  .home-columns { grid-template-columns: 1fr; gap: 35px; margin-top: 37px; }
+  .home-section .section-heading { margin-bottom: 12px; }
+  .home-section .loading-state { min-height: 96px; }
+}

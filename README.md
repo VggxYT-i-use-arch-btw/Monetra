@@ -32,9 +32,9 @@ URL após a publicação: `https://<user>.github.io/<repo>/`.
 
 ## Dados simulados
 
-`src/api` implementa a camada mock substituível por um backend. Produtos, preços, alertas, análise de texto e teste de webhook são simulados; não há scraping nem autenticação. Para integrar um backend, preserve os tipos e as assinaturas da API e substitua suas implementações por chamadas HTTP.
+`src/api` implementa a camada mock substituível por um backend. Produtos, preços, alertas e análise de texto são simulados; não há scraping nem autenticação. O botão de teste do Discord envia um POST real do navegador para a URL informada. Para integrar um backend, preserve os tipos e as assinaturas da API e substitua suas implementações por chamadas HTTP.
 
-Agentes, alertas, ajustes e o webhook do Discord ficam no `localStorage` do navegador. Qualquer pessoa com acesso a esse navegador pode ler o webhook salvo. Alertas reais e armazenamento seguro do segredo precisam de um backend.
+Agentes, alertas, ajustes e o webhook do Discord ficam no `localStorage` do navegador. Qualquer pessoa com acesso a esse navegador pode ler o webhook salvo. O webhook inicial é apenas um placeholder. Alertas reais e armazenamento seguro do segredo precisam de um backend.
 
 ## Referências visuais
 

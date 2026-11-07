@@ -35,9 +35,11 @@ export function filterHistoryByRange(
   const cutoff = new Date(now);
   cutoff.setHours(0, 0, 0, 0);
   cutoff.setDate(cutoff.getDate() - (days - 1));
+  const endOfToday = new Date(now);
+  endOfToday.setHours(23, 59, 59, 999);
 
   return history.filter((point) => {
     const date = parsePointDate(point.date);
-    return date !== undefined && date >= cutoff && date <= now;
+    return date !== undefined && date >= cutoff && date <= endOfToday;
   });
 }

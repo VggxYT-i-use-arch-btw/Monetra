@@ -1,0 +1,78 @@
+.agent-list, .deal-list, .product-list, .alert-list, .store-list { display: grid; }
+.full-list { border-top: 1px solid var(--hairline); }
+.agent-item { position: relative; }
+.agent-row { display: flex; min-height: 78px; align-items: center; gap: 12px; border-bottom: 1px solid var(--hairline); }
+.agent-row.compact { min-height: 75px; padding: 0 12px; border: 1px solid var(--hairline); border-radius: 12px; background: var(--surface); }
+.compact-list { gap: 8px; }
+.row-main { display: flex; min-width: 0; flex: 1; align-items: center; gap: 13px; border: 0; background: transparent; color: var(--text); text-align: left; cursor: pointer; }
+.row-main > svg { width: 19px; height: 19px; flex: 0 0 auto; color: var(--secondary); }
+.row-copy { display: grid; min-width: 0; gap: 4px; }
+.row-copy strong { font-size: 14px; font-weight: 500; line-height: 1.22; }
+.row-copy small { color: var(--secondary); font-size: 11px; }
+.row-details { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.row-details small { white-space: nowrap; }
+.row-status-text { font-weight: 500; }
+.agent-row:not(.compact) > .status-badge { display: none; }
+.status-badge { display: inline-flex; align-items: center; gap: 5px; color: var(--secondary); font-size: 11px; white-space: nowrap; }
+.status-badge::before { width: 6px; height: 6px; border-radius: 50%; background: currentColor; content: ''; }
+.status-ativo { color: var(--sage); }
+.status-erro { color: var(--brick); }
+.status-pausado { color: var(--secondary); }
+.row-menu { width: 34px; height: 34px; }
+.agent-menu { position: absolute; z-index: 12; top: 56px; right: 34px; display: grid; min-width: 150px; padding: 6px; border: 1px solid var(--hairline); border-radius: 12px; background: var(--surface-raised); }
+.agent-menu button { padding: 10px 12px; border: 0; border-radius: 7px; background: transparent; color: var(--text); text-align: left; cursor: pointer; }
+.agent-menu button:hover { background: var(--surface); }
+.destructive { color: var(--brick) !important; }
+
+.deal-row { display: grid; grid-template-columns: 34px minmax(0, 1fr) auto 18px; align-items: center; gap: 12px; min-height: 94px; padding: 13px 0; border-bottom: 1px solid var(--hairline); }
+.deal-row > svg:first-child { width: 20px; height: 20px; color: var(--secondary); }
+.deal-copy { display: grid; min-width: 0; gap: 3px; }
+.deal-copy strong { overflow: hidden; font-size: 13px; font-weight: 500; text-overflow: ellipsis; white-space: nowrap; }
+.deal-copy small { color: var(--secondary); font-size: 11px; }
+.deal-copy b { font-family: var(--mono); font-size: 13px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.deal-discount { color: var(--sage); font-family: var(--mono); font-size: 10px; white-space: nowrap; }
+.deal-chevron { width: 17px; height: 17px; color: var(--tertiary); }
+.home-section .deal-row { grid-template-columns: 29px minmax(0, 1fr) 18px; min-height: 78px; padding: 10px; border: 1px solid var(--hairline); border-radius: 12px; background: var(--surface); }
+.home-section .deal-discount { display: none; }
+.home-section .deal-copy b { width: fit-content; padding: 3px 7px; border-radius: 999px; background: color-mix(in srgb, var(--sage) 17%, transparent); color: var(--sage); font-size: 11px; }
+
+.product-row { display: flex; min-height: 67px; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--hairline); }
+.product-row > span { display: grid; gap: 4px; }
+.product-row strong { font-size: 13px; font-weight: 500; }
+.product-row > b { font-family: var(--mono); font-size: 13px; font-weight: 400; white-space: nowrap; }
+.verdict-label { display: inline-flex; width: fit-content; padding: 5px 9px; border: 1px solid var(--hairline); border-radius: 999px; color: var(--secondary); font-size: 11px; }
+.verdict-genuine, .lowest-label { border-color: color-mix(in srgb, var(--sage) 35%, transparent); color: var(--sage); }
+.verdict-insufficient { color: var(--secondary); }
+.verdict-inflated { border-color: color-mix(in srgb, var(--brick) 35%, transparent); color: var(--brick); }
+
+.alert-row { position: relative; display: grid; gap: 7px; padding: 17px 0; border-bottom: 1px solid var(--hairline); }
+.alert-product-name { font-size: 14px; font-weight: 500; }
+.alert-price-change { display: flex; align-items: baseline; gap: 9px; font-family: var(--mono); font-size: 12px; font-variant-numeric: tabular-nums; }
+.alert-price-change del { color: var(--tertiary); }
+.alert-price-change > strong { color: var(--text); font-size: 14px; font-weight: 500; }
+.alert-price-change em { color: var(--sage); font-size: 11px; font-style: normal; }
+.alert-row > small { color: var(--secondary); font-size: 11px; }
+.alert-tag { width: fit-content; padding: 4px 8px; border: 1px solid var(--hairline); border-radius: 999px; color: var(--sage); font-size: 10px; }
+
+.store-row { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; min-height: 70px; align-items: center; gap: 12px; border-bottom: 1px solid var(--hairline); }
+.store-copy { display: grid; gap: 3px; }
+.store-copy > strong { font-size: 13px; font-weight: 500; }
+.store-price { font-family: var(--mono); font-size: 13px; font-weight: 400; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.lowest-label { font-size: 10px; }
+.store-link { min-height: 34px; padding: 0 13px; font-size: 11px; }
+.store-text-link { white-space: nowrap; }
+
+@media (max-width: 899px) {
+  .agent-row { min-height: 72px; gap: 8px; }
+  .agent-row.compact { min-height: 70px; padding: 0 10px; }
+  .row-copy strong { font-size: 12px; }
+  .row-details { flex-wrap: wrap; justify-content: flex-start; gap: 2px 8px; }
+  .row-details small { font-size: 9px; }
+  .status-badge { font-size: 10px; }
+  .deal-row { grid-template-columns: 24px minmax(0, 1fr) auto 14px; gap: 8px; min-height: 82px; }
+  .home-section .deal-row { grid-template-columns: 24px minmax(0, 1fr) 14px; min-height: 78px; }
+  .deal-copy strong { font-size: 12px; }
+  .deal-discount { font-size: 9px; }
+  .store-row { grid-template-columns: minmax(0, 1fr) auto; gap: 6px 12px; padding: 9px 0; }
+  .store-link, .store-text-link { grid-column: 1 / -1; justify-self: start; }
+}

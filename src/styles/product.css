@@ -1,0 +1,49 @@
+.product-page { max-width: 1020px; }
+.product-page .page-heading { align-items: flex-start; }
+.product-page .page-heading h1 { max-width: 760px; font-size: clamp(34px, 4vw, 52px); }
+.product-price-block { display: grid; gap: 3px; margin: 32px 0 18px; }
+.product-price-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 14px; }
+.product-price { font-family: var(--mono); font-size: clamp(33px, 5vw, 48px); font-weight: 400; font-variant-numeric: tabular-nums; letter-spacing: -.05em; }
+.product-price-line del { color: var(--tertiary); font-family: var(--mono); font-size: clamp(15px, 2vw, 20px); font-variant-numeric: tabular-nums; }
+.product-price-block > span { color: var(--secondary); font-size: 13px; }
+.verdict-copy { max-width: 660px; margin: 14px 0 24px; color: var(--secondary); font-size: 14px; }
+.price-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 23px 0 25px; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
+.price-stats > div { display: grid; gap: 7px; padding: 16px 14px 17px 0; }
+.price-stats > div + div { padding-left: 18px; border-left: 1px solid var(--hairline); }
+.price-stats small { color: var(--secondary); font-size: 11px; }
+.price-stats strong { font-family: var(--mono); font-size: clamp(13px, 1.4vw, 17px); font-weight: 400; font-variant-numeric: tabular-nums; }
+.product-page > .segmented-control { margin-bottom: 18px; }
+.chart-frame { position: relative; display: grid; grid-template-columns: 82px minmax(0, 1fr); grid-template-rows: minmax(180px, 260px) auto; margin: 0 0 31px; }
+.chart-y-labels { display: flex; grid-row: 1; flex-direction: column; justify-content: space-between; padding: 5px 12px 0 0; color: var(--secondary); font-family: var(--mono); font-size: 10px; font-variant-numeric: tabular-nums; }
+.chart-y-labels span { white-space: nowrap; }
+.price-chart { width: 100%; height: 100%; overflow: visible; touch-action: pan-y; outline: none; }
+.chart-grid { fill: none; stroke: var(--hairline); stroke-width: 1; }
+.chart-area { fill: var(--sage); opacity: .08; }
+.chart-line { fill: none; stroke: var(--sage); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.chart-reference { fill: none; stroke: var(--tertiary); stroke-width: 1; stroke-dasharray: 5 5; }
+.chart-reference-label { fill: var(--secondary); font-family: 'Inter Tight', sans-serif; font-size: 10px; }
+.chart-crosshair { fill: none; stroke: var(--secondary); stroke-width: 1; stroke-dasharray: 3 4; }
+.chart-dot { fill: var(--sage); stroke: var(--background); stroke-width: 1.5; }
+.chart-x-labels { display: flex; grid-column: 2; justify-content: space-between; padding-top: 8px; color: var(--secondary); font-family: var(--mono); font-size: 10px; }
+.chart-note { grid-column: 2; margin: 3px 0 0; color: var(--secondary); font-size: 11px; }
+.chart-tooltip { position: absolute; top: 43%; right: 20px; display: grid; gap: 3px; padding: 8px 10px; border: 1px solid var(--hairline); border-radius: 8px; background: var(--surface-raised); font-family: var(--mono); font-size: 11px; }
+.chart-tooltip small { color: var(--secondary); font-family: 'Inter Tight', sans-serif; }
+.verified-label { color: var(--secondary); font-size: 10px; }
+
+@media (max-width: 899px) {
+  .product-page { padding-top: 24px; }
+  .product-page .page-heading { margin-bottom: 17px; }
+  .product-page .page-heading h1 { font-size: 34px; }
+  .product-price-block { margin: 27px 0 14px; }
+  .product-price { font-size: 35px; }
+  .price-stats { margin: 20px 0; }
+  .price-stats > div { gap: 6px; padding: 12px 7px 13px 0; }
+  .price-stats > div + div { padding-left: 9px; }
+  .price-stats small { font-size: 9px; }
+  .price-stats strong { font-size: 11px; }
+  .chart-frame { grid-template-columns: 69px minmax(0, 1fr); grid-template-rows: minmax(170px, 210px) auto; margin-bottom: 26px; }
+  .chart-y-labels { padding-right: 8px; font-size: 9px; }
+  .chart-x-labels { font-size: 9px; }
+  .product-page .section-heading { margin-top: 25px; }
+  .verified-label { font-size: 9px; }
+}
