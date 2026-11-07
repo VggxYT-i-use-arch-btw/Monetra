@@ -1,41 +1,17 @@
 # Monetra by Boreas
 
-Aplicação web responsiva para acompanhar preços e identificar ofertas. O projeto usa Vite, React, TypeScript estrito, React Router com `HashRouter` e CSS próprio. Os dados são simulados no navegador.
+O Monetra ajuda você a acompanhar preços e decidir quando comprar. Você descreve o produto que procura ou cola um link; a partir daí, cria um agente com filtros como categoria, marca, preço máximo e lojas.
 
-## Executar localmente
+## O que você pode fazer
 
-```sh
-npm ci
-npm run dev
-```
+- Criar, editar, pausar, retomar e excluir agentes de monitoramento.
+- Ver os produtos encontrados para cada agente e acompanhar o preço atual em diferentes lojas.
+- Consultar o histórico de preços por período, com menor preço, mediana e maior preço.
+- Identificar se uma oferta parece genuína, se o preço anunciado pode estar inflado ou se ainda faltam dados para avaliar.
+- Ver ofertas e alertas de queda de preço em listas próprias.
+- Escolher a frequência de verificação e configurar preferências para Discord, E-mail e Telegram.
+- Alternar entre tema escuro e claro e acompanhar o uso do plano gratuito.
 
-Para compilar, use `npm run build`. Os testes são executados com `npm test` e `npm run test:e2e`.
+## Como funciona nesta versão
 
-## Publicar no GitHub Pages
-
-O workflow publica a pasta `dist/` ao enviar alterações para `main`. Nas configurações do repositório, escolha **Settings > Pages > Source = GitHub Actions**.
-
-URL após a publicação: `https://<user>.github.io/<repo>/`.
-
-## Rotas
-
-- `/#/` — Início
-- `/#/ofertas` — Melhores ofertas
-- `/#/agentes` — lista e filtros de agentes
-- `/#/agentes/novo` — criação de agente
-- `/#/agentes/novo/criado` — confirmação de criação
-- `/#/agentes/:id` — detalhes do agente
-- `/#/agentes/:id/editar` — edição
-- `/#/produtos/:id` — histórico, estatísticas e lojas
-- `/#/alertas` — alertas filtráveis
-- `/#/ajustes` — canais, aparência e plano
-
-## Dados simulados
-
-`src/api` implementa a camada mock substituível por um backend. Produtos, preços, alertas e análise de texto são simulados; não há scraping nem autenticação. O botão de teste do Discord envia um POST real do navegador para a URL informada. Para integrar um backend, preserve os tipos e as assinaturas da API e substitua suas implementações por chamadas HTTP.
-
-Agentes, alertas, ajustes e o webhook do Discord ficam no `localStorage` do navegador. Qualquer pessoa com acesso a esse navegador pode ler o webhook salvo. O webhook inicial é apenas um placeholder. Alertas reais e armazenamento seguro do segredo precisam de um backend.
-
-## Referências visuais
-
-Os quatro boards estão em `docs/reference/` como cópias WebP reduzidas. Capturas de teste ficam fora do controle de versão.
+Esta versão é um protótipo de interface: os produtos, preços, históricos, agentes e alertas são demonstrativos. Ela não consulta lojas nem monitora preços reais, e não envia notificações automáticas. Ao testar o Discord, o Monetra tenta enviar uma mensagem ao webhook informado; o webhook inicial é apenas um placeholder.
